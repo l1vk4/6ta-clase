@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chart.js</title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+  <p>Más información en 
+    <a href="https://www.chartjs.org/docs/latest/getting-started/" target="_blank">Chart.js</a>, 
+    y otro gráfico <a href="index.html">portada</a>
+  </p>
+
+  <canvas id="aqui"></canvas>
+  <canvas id="alla"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    new Chart("aqui", {
+      type: "bar",
+      data: {
+        labels: ['Tokio', 'Dehli', 'Shangai', 'Dhaka', 'Sao Paulo', 'Ciudad de Mexico'],
+        datasets: [{
+          label: "Población",
+          data: [37000000, 33000000, 29000000, 23000000, 22000000, 22000000],
+          backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(153, 102, 255, 0.2)',
+      'rgba(201, 203, 207, 0.2)'
+    ],
+    borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)',
+      'rgb(75, 192, 192)',
+      'rgb(54, 162, 235)',
+      'rgb(153, 102, 255)',
+      'rgb(201, 203, 207)'
+    ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: true
+          }
+        }
+      }
+    });
+  </script>
+
+   <script>
+    new Chart("alla", {
+      type: "line",
+      data: {
+      labels: ['Tokio', 'Dehli', 'Shangai', 'Dhaka', 'Sao Paulo', 'Ciudad de Mexico'],
+      datasets: [
+      {
+       label: "Población",
+          data: [37000000, 33000000, 29000000, 23000000, 22000000, 22000000],
+          borderWidth: 1,
+          borderColor:"pink",
+        },
+        {
+            label: "chalecos a cuadros",
+            data: [899085, 7667674, 909037, 2333908, 657899, 657890],
+            borderWidth: 1,
+          borderColor:"cyan"
+        }
+        ]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+</script>
+    </body>
+</html>
