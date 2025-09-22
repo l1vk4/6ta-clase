@@ -1,0 +1,15 @@
+*{ /*asterisco es selector general*/
+	margin:0;
+	padding:0;
+}
+
+p{
+   text-align:center; 
+   margin-top:2rem; /*rem es unidad relativa  }
+   La hisotoria del cuadratin (M,em) R de ROOT (apela a la raiz) */
+}
+
+canvas{
+	width:100vw;
+	height:80vh;
+}
